@@ -1,0 +1,216 @@
+/*RESET CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*END RESET CSS*/
+@font-face {
+  font-family: 'SF-Pro-Display-Thin';
+  src: url("../_fonts/SF-Pro-Display-Thin.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro-Display-Light';
+  src: url("../_fonts/SF-Pro-Display-Light.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro-Display-Regular';
+  src: url("../_fonts/SF-Pro-Display-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro-Display-Medium';
+  src: url("../_fonts/SF-Pro-Display-Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro-Display-Bold';
+  src: url("../_fonts/SF-Pro-Display-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro-Display-Heavy';
+  src: url("../_fonts/SF-Pro-Display-Heavy.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futural-Bold';
+  src: url("../_fonts/SFUFuturaBold.TTF");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 1.50em;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 1.25em;
+  margin-bottom: 8px;
+}
+
+h6 {
+  font-size: 1em;
+  margin-bottom: 6px;
+}
+
+p {
+  padding-bottom: 12px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin-bottom: 12px;
+  background: #eee;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*********** CONTAINER ***********/
+.ctn {
+  margin: auto;
+  display: block;
+  clear: both;
+}
+
+.psh-left {
+  float: left;
+}
+
+.psh-right {
+  float: right;
+}
+
+.aln-center {
+  text-align: center;
+}
+
+.aln-left {
+  text-align: left;
+}
+
+.aln-right {
+  text-align: right;
+}
+
+.aln-justify {
+  text-align: justify;
+}
+
+.txt-bold {
+  font-family: 'SF-Pro-Display-Bold';
+}
+
+.txt-over {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.row-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.col-grid-1, .col-grid-2, .col-grid-3, .col-grid-4, .col-grid-4, .col-grid-5, .col-grid-6, .col-grid-7, .col-grid-8, .col-grid-9, .col-grid-10, .col-grid-11, .col-grid-12 {
+  width: 100%;
+}
+/*# sourceMappingURL=reset.css.map */

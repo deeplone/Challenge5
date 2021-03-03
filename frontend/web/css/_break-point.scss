@@ -1,0 +1,481 @@
+@media (max-width:768px) {
+
+    .mdl-recording {
+        .ctn-3 {
+            .card {
+
+                .txt-line,
+                .form-payment {
+                    padding: 20px 0;
+                }
+            }
+        }
+
+        .list-inline {
+            li {
+                min-width: 80px;
+                flex-basis: 80px;
+                padding: 10px 0;
+                margin-left: 0;
+                margin-right: 0;
+
+                font-size: 14px;
+            }
+        }
+
+        .ttl-sub{
+            margin: 0 10px 5px 0;
+        }
+        p{
+            margin-bottom: 0.3em;
+        }
+
+        .ctn-3 .card .txt-line,.ctn-3 .card .form-payment{
+            margin: 0.5em 0;
+            padding: 10px 0;
+            margin-top: 0;
+            padding-top: 10px;
+        }
+
+        .mdl-recording .ctn-3 .card .card-text{
+            padding: 0;
+            margin: 0;
+        }
+
+        .ctn {
+            min-height: 70vh;
+            padding-bottom: 60px;
+            position: relative;
+            .row-ctn-bottom{
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                right: 15px;
+            }
+        }
+
+        .text-muted{
+            text-align: left;
+        }
+
+        .ctn-3 .row-try .btn-listen{
+            margin-top: 0.2em;
+        }
+        
+
+        .ctn-3 .row-try .listening{
+            padding: 0.2em 0.3em 0.2em 0.3em ;
+            margin-top: 0.2em;
+        }
+    }
+
+    div#single-song-player {
+        padding: 0;
+    }
+
+    .mdl-price,
+    .mdl-procedure {
+        .card {
+            min-height: auto;
+            margin-bottom: 30px;
+
+            .card-body {
+                .card-subtitle {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .mdl-procedure {
+        .card {
+            margin-bottom: 60px;
+        }
+    }
+
+    .mdl-feedback,
+    .mdl-customer,
+    .mdl-benefit,
+    .mdl-procedure {
+        .ttl {
+            font-size: 20px;
+            padding: 40px 0 10px 0;
+        }
+    }
+
+    .mdl-feedback {
+        .ttl{
+            padding: 10px 0;
+        }
+    }
+
+    .mdl-banner {
+        text-align: center;
+
+        .item {
+            padding: 30px 0;
+
+            .ttl {
+                margin: 0;
+                width: 100%;
+                padding: 30px 0;
+                font-size: 1.2em;
+            }
+
+            .img-highlight {
+                position: relative;
+                right: 0;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .btn-banner {
+                margin: 10px;
+                min-width: 150px;
+                font-size: 1em;
+            }
+        }
+    }
+
+    .mdl-customer {
+        .txt-highlight {
+            font-size: 22px;
+        }
+        .txt-1{
+            font-size: 16px;
+        }
+    }
+
+    .mdl-table {
+        overflow: hidden;
+
+        .btn-outline-info {
+            margin-bottom: 10px;
+        }
+
+        .form-control.rounded-pill {
+            width: 80%;
+        }
+
+        .scroll-table {
+            width: 100%;
+            overflow-y: auto;
+        }
+    }
+
+    .slick-next {
+        right: -10px;
+    }
+
+    .mdl-benefit {
+        .stack-1 {
+            margin: 20px 0;
+
+            .fa-check {
+                float: left;
+                margin-left: 0;
+                margin-right: 20px;
+            }
+        }
+
+        .text-right {
+            text-align: left !important;
+        }
+    }
+
+    .mdl-price .card .card-body .card-title,
+    .mdl-price .card .card-body .card-subtitle {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .mdl-price .card .card-body .card-title {
+        margin-bottom: 40px;
+    }
+
+    .mdl-price .card .card-body .card-text {
+        font-size: 16px;
+    }
+
+    .navbar {
+        .navbar-nav {
+            margin-top: 20px;
+
+            .nav-link {}
+        }
+
+        .fa-user-tie {
+            margin-left: 15px;
+        }
+
+        .navbar-brand {
+            margin: 0 auto;
+        }
+
+        .navbar-toggler {
+            position: absolute;
+            padding-left: 0;
+            padding-right: 0;
+            left: 0;
+            top: 5px;
+        }
+    }
+
+    .modal-theme {
+        .modal-content {
+            .ctn {
+                padding: 50px 10px;
+            }
+        }
+    }
+
+    .my-2 {
+        .btn {
+            padding: 0;
+
+            .txt {
+                display: none
+            }
+        }
+
+        .dropdown-toggle {
+
+            &::after,
+            &::before {
+                display: none;
+            }
+        }
+
+        .dropdown-menu {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    .my-2 {
+        position: absolute;
+        top: 7px;
+        right: 0;
+
+        .dropdown-menu {
+            top: 37px;
+            padding: 0;
+        }
+    }
+
+    .img-highlight {
+        display: none;
+    }
+
+    .mdl-procedure .txt-2,
+    .mdl-procedure .ttl {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .gov-logo {
+        max-width: 150px;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    .mdl-procedure .lnk-step-left,
+    .mdl-procedure .lnk-step-right {
+        display: none;
+    }
+
+    #signUpModal,
+    #signInModal {
+        .modal-dialog {
+            margin: 0;
+            padding: 0;
+        }
+
+        .modal-content {
+            width: 100vw;
+            height: 100vh;
+            border: 0;
+            @include radius-rounder(0);
+        }
+
+        .modal-dialog-scrollable {
+            min-height: calc(100% - 0rem);
+            max-height: calc(100% - 0rem);
+        }
+    }
+
+    .mdl-recording .ctn-3 .card {
+        margin: 0;
+    }
+
+    .mdl-recording .txt1 {
+        padding: 0 10px;
+    }
+
+    .mdl-recording .ctn-3 .card .form-payment .was-validated {
+        padding: 0;
+    }
+
+    .mdl-recording .ctn-3 .row-try {
+        margin-bottom: 10px;
+    }
+
+    .modal-edited .modal-body h5 {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .mdl-recording .row:last-child .col-md-3 {
+        margin-bottom: 10px;
+    }
+
+    .modal-theme .modal-content .btn {
+        font-size: 1em;
+    }
+
+    .modal-theme .modal-body {
+        padding: 0 10px;
+    }
+
+    .mdl-brand .img-itm {
+        min-height: 100px;
+    }
+
+    .mdl-brand .overlay .btn .txt-1 {
+        display: none;
+    }
+
+    .mdl-brand .overlay{
+        width: 40px;
+        margin: -28px 0 0 -17px;
+        visibility: visible;
+    }
+
+    .mdl-brand .overlay .btn {
+        width: 40px;
+        height: 40px;
+        padding: 0px 0 0 2px;
+    }
+
+    .mdl-table .ml-5{
+        margin-left: 0 !important;
+        margin-top: 15px;
+    }
+
+    .mdl-tab {
+        li{
+            padding-right: 10px;
+        }
+        a{
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width:769px) {
+    .mdl-price {
+        .card {
+            min-height: 500px;
+        }
+    }
+
+    .mdl-banner {
+        .item {
+            min-height: 500px;
+        }
+    }
+
+    .mdl-procedure {
+        min-height: 600px;
+    }
+
+    .mdl-banner {
+        .txt-bottom {
+            bottom: -30px;
+        }
+    }
+
+    .navbar-nav {
+        margin-right: 10px;
+    }
+
+    .mdl-recording {
+        .col-md-12 {
+            >.list-inline {
+                .list-inline-item {
+                    min-width: 226px;
+                }
+            }
+        }
+
+        .mt-4 {
+            .pretty {
+                margin-left: 188px;
+            }
+        }
+
+        .col-md-5 {
+            width: 37.6666%;
+            flex: 0 0 37.6666%;
+            padding-bottom: 15px;
+        }
+
+        .offset-md-1 {
+            margin-left: 12.333333%;
+        }
+    }
+
+    .modal-edited .modal-dialog {
+        max-width: 380px !important;
+    }
+
+    .modal-theme .modal-dialog {
+        max-width: 450px !important;
+    }
+
+
+    .modal-edited-gradient {
+        .modal-dialog {
+            max-width: 800px !important;
+
+            .modal-body {
+                padding: 15px;
+            }
+        }
+    }
+
+    .mdl-banner .item .active {
+        margin-left: 110px;
+    }
+
+    #listenModal .modal-dialog{
+        max-width: 470px !important;
+    }
+
+}
+
+nav .dropdown-menu {
+    background: #00c6ea;
+    color: #fff;
+    @include radius-rounder(0);
+    border: 0;
+
+    a {
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width:1280px) {
+    nav .container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width:1200px) {
+    nav .container {
+        max-width: 1250px;
+    }
+}

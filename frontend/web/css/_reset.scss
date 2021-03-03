@@ -1,0 +1,257 @@
+/* CSS Document */	
+.container {
+  width:100%;	
+  position: relative; // For header menu
+  z-index: 1;// For header menu
+  .container{
+    padding-top: 50px;
+  }
+	}
+	
+
+	
+.footer .container{
+	padding-top:0px;
+	}
+	
+.reset-margin,.reset-margin .item{
+	margin-bottom:0 !important;
+	}	
+	
+.container-rs {
+	padding-top:0px;
+	}	
+	
+.ellipsis {
+	width:100%;
+	text-overflow: ellipsis;	
+	/* Required for text-overflow to do anything */
+	white-space: nowrap;
+	overflow: hidden;
+}		
+	
+/***********Icon-font**************/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ncvh2c');
+  src:  url('../fonts/icomoon.eot?ncvh2c#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ncvh2c') format('truetype'),
+    url('../fonts/icomoon.woff?ncvh2c') format('woff'),
+    url('../fonts/icomoon.svg?ncvh2c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-delete:before {
+  content: "\e90a";
+}
+.icon-refresh:before {
+  content: "\e90b";
+}
+.icon-arrow-left:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-bell:before {
+  content: "\e902";
+}
+.icon-dot-three:before {
+  content: "\e903";
+}
+.icon-eye:before {
+  content: "\e904";
+}
+.icon-play:before {
+  content: "\e905";
+}
+.icon-like:before {
+  content: "\e906";
+}
+.icon-pause:before {
+  content: "\e907";
+}
+.icon-search:before {
+  content: "\e908";
+}
+.icon-send:before {
+  content: "\e909";
+}
+
+
+/**************************************************/
+@font-face {
+  font-family: 'icomoon_2';
+  src:  url('../fonts/icomoon_2.eot?6ts0z2');
+  src:  url('../fonts/icomoon_2.eot?6ts0z2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon_2.ttf?6ts0z2') format('truetype'),
+    url('../fonts/icomoon_2.woff?6ts0z2') format('woff'),
+    url('../fonts/icomoon_2.svg?6ts0z2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon2-"], [class*=" icon2-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon_2' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon2-mobitv_hd:before {
+  content: "\e91f";
+}
+.icon2-mobitv_list:before {
+  content: "\e920";
+}
+.icon2-mobitv_live:before {
+  content: "\e921";
+}
+.icon2-mobitv_money:before {
+  content: "\e922";
+}
+.icon2-arrow-down:before {
+  content: "\e91c";
+  color: #fff;
+}
+.icon2-arrow-up:before {
+  content: "\e91d";
+  color: #fff;
+}
+.icon2-myclip-video:before {
+  content: "\e91e";
+  color: #0081ff;
+}
+.icon2-channel:before {
+  content: "\e918";
+  color: #fff;
+}
+.icon2-check:before {
+  content: "\e919";
+  color: #00ffb4;
+}
+.icon2-quality:before {
+  content: "\e91a";
+  color: #fff;
+}
+.icon2-trend:before {
+  content: "\e91b";
+  color: #bbb;
+}
+.icon2-lightbolt:before {
+  content: "\e915";
+  color: #bbb;
+}
+.icon2-price:before {
+  content: "\e916";
+  color: #bbb;
+}
+.icon2-time:before {
+  content: "\e917";
+  color: #fff;
+}
+.icon2-ringback:before {
+  content: "\e914";
+}
+.icon2-dics:before {
+  content: "\e912";
+}
+.icon2-ring:before {
+  content: "\e913";
+}
+.icon2-binocular:before {
+  content: "\e911";
+  color: #ff7d00;
+}
+.icon2-music:before {
+  content: "\e910";
+  color: #00a99d;
+}
+.icon2-film:before {
+  content: "\e90b";
+  color: #00a99d;
+}
+.icon2-home:before {
+  content: "\e90c";
+  color: #f00;
+}
+.icon2-play:before {
+  content: "\e90d";
+  color: #00a99d;
+}
+.icon2-search:before {
+  content: "\e90e";
+  color: #3fa9f5;
+}
+.icon2-view:before {
+  content: "\e90f";
+  color: #00a99d;
+}
+.icon2-author-mybolero:before {
+  content: "\e909";
+  color: #fabe5a;
+}
+.icon2-micro-mybolero:before {
+  content: "\e90a";
+  color: #fabe5a;
+}
+.icon2-cart:before {
+  content: "\e900";
+  color: #f81414;
+}
+.icon2-gear:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon2-account-5dmax:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon2-episode-5dmax:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon2-film-5dmax:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon2-home-5dmax:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon2-list-5dmax:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon2-logout-5dmax:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon2-package-5dmax:before {
+  content: "\e908";
+  color: #fff;
+}

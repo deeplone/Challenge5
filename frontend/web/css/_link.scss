@@ -1,0 +1,71 @@
+/**********************/
+.link-more {
+	clear: both;
+	text-align: center;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ebebeb;
+	padding-bottom: 5px;
+}
+.link-more a {
+	display: block;
+	color: #ababab;
+}
+.link-more a:hover, .link-more a:focus {
+	display: block;
+	color: #7a94b9;
+	text-decoration: none;
+}
+.icon-link {
+	border-left: 1px solid #ababab;
+	border-bottom: 1px solid #ababab;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	-ms-transform: rotate(-45deg); /* IE 9 */
+	-webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+	transform: rotate(-45deg);
+}
+a:hover .icon-link {
+	border-left: 1px solid #7a94b9;
+	border-bottom: 1px solid #7a94b9;
+	-ms-transform: rotate(-45deg); /* IE 9 */
+	-webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+	transform: rotate(-45deg);
+}
+.icon-link-close {
+	border-left: 1px solid #ababab;
+	border-bottom: 1px solid #ababab;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	-ms-transform: rotate(-225deg); /* IE 9 */
+	-webkit-transform: rotate(-225deg); /* Chrome, Safari, Opera */
+	transform: rotate(-225deg);
+}
+a:hover .icon-link-close {
+	border-left: 1px solid #7a94b9;
+	border-bottom: 1px solid #7a94b9;
+	-ms-transform: rotate(-225deg); /* IE 9 */
+	-webkit-transform: rotate(-225deg); /* Chrome, Safari, Opera */
+	transform: rotate(-225deg);
+}
+
+/*****************/	
+/*Screen smaller more 370*/
+@media screen and (max-width: 370px) {
+/*Screen smaller more 370*/
+.nav > li > a {
+	padding: 10px 0px;
+}
+}
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	width: 100%;
+}
+
+.view-more{
+	p{
+		margin: 0;
+	}
+	text-align: center;
+	color: #979797;
+}

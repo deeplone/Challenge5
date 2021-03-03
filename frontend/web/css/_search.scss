@@ -1,0 +1,85 @@
+/************box-search***************/		
+.popup-search {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.9);
+	z-index: 1030;
+	display: none;
+	@extend %transition;
+}
+.box-search {
+	margin-top: 0;
+	background: #000;
+	color: #fff;
+	float: left;
+	width: 100%;
+	padding: 8px 0 4px 0;
+	@extend %transition;
+	
+}
+.text-search {
+	padding:0 10px;
+	color:#919191;
+	margin-top:20px;
+}
+.box-search .pull-right {
+	width: 14%;
+}
+.box-search .pull-left {
+	width: 14%;
+	text-align: right;
+}
+.box-search .fa {
+	color: #fff;
+	font-size: 1.7em;
+	margin: 5px 10px 5px 10px;
+}
+.box-search .ipt-search {
+	width: 66vw;
+	color: #000;
+	border: 0;
+	border-radius: 3px;
+	padding: 8px 10px;
+}
+/*box-search-suggess*/
+.box-search-suggess {
+	@extend %transition;
+	margin-top: 38px;
+	color: #fff;
+	width: 100%;
+	padding: 4px 0 0 0;
+	display: none;
+	-webkit-transition: display 1s; /* Safari */
+	-webkit-transition-timing-function: linear; /* Safari */
+	transition: display 1s;
+	transition-timing-function: linear;
+	overflow:scroll;
+}
+.box-search-suggess ul {
+	list-style: inside none;
+	padding: 0 0 0 0;
+	margin: 0;
+}
+.box-search-suggess ul li {
+	padding: 15px 15px;
+	color:#919191;
+	display: flex;
+}
+.box-search-suggess .fa {
+	color: #fff;
+	margin-right: 15px;
+    margin-left: 10px;
+	font-size: 1.2em;
+	flex: 14px 0 0;
+}
+.box-search-suggess .txt-song, .box-search-suggess .txt-song a {
+	color: #fff;
+}
+.box-search-suggess .txt-singer, .box-search-suggess .txt-singer a {
+	color: #7a94b9;
+}

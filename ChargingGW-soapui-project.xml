@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1a5c390c-04f4-4f63-b6e7-3f199d6845fa" activeEnvironment="Default" name="ChargingGW" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="eb88bb0c-fa9a-4a58-bea8-e5837f93a5ef" wsaVersion="NONE" name="ProcessClientsSOAP12Binding" type="wsdl" bindingName="{http://vas/com/}ProcessClientsSOAP12Binding" soapVersion="1_2" anonymous="optional" definition="file:/D:/01.Working/Imuzik/KHDN/source/frontend/web/vcgw.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/D:/01.Working/Imuzik/KHDN/source/frontend/web/vcgw.wsdl"><con:part><con:url>file:/D:/01.Working/Imuzik/KHDN/source/frontend/web/vcgw.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://vas/com/" xmlns:axis2="http://vas/com/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://vas/com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <wsdl:documentation>ProcessClients</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://vas/com/xsd" xmlns:ns="http://vas/com/xsd">
+      <xs:element name="ProcessAuthen">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="username" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="cmd" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="providerid" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessAuthenResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="processCharging">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="charging" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="username" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="reqTime" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="providerid" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="serviceId" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="cmd" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="contents" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="requestId" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="processChargingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="processChargingRequest">
+    <wsdl:part name="part1" element="ns0:processCharging"/>
+  </wsdl:message>
+  <wsdl:message name="processChargingResponse">
+    <wsdl:part name="part1" element="ns0:processChargingResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ProcessAuthenRequest">
+    <wsdl:part name="part1" element="ns0:ProcessAuthen"/>
+  </wsdl:message>
+  <wsdl:message name="ProcessAuthenResponse">
+    <wsdl:part name="part1" element="ns0:ProcessAuthenResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ProcessClientsPortType">
+    <wsdl:operation name="processCharging">
+      <wsdl:input message="axis2:processChargingRequest" wsaw:Action="urn:processCharging"/>
+      <wsdl:output message="axis2:processChargingResponse" wsaw:Action="urn:processChargingResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAuthen">
+      <wsdl:input message="axis2:ProcessAuthenRequest" wsaw:Action="urn:ProcessAuthen"/>
+      <wsdl:output message="axis2:ProcessAuthenResponse" wsaw:Action="urn:ProcessAuthenResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProcessClientsSOAP11Binding" type="axis2:ProcessClientsPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="processCharging">
+      <soap:operation soapAction="urn:processCharging" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAuthen">
+      <soap:operation soapAction="urn:ProcessAuthen" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProcessClientsSOAP12Binding" type="axis2:ProcessClientsPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="processCharging">
+      <soap12:operation soapAction="urn:processCharging" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAuthen">
+      <soap12:operation soapAction="urn:ProcessAuthen" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProcessClientsHttpBinding" type="axis2:ProcessClientsPortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="processCharging">
+      <http:operation location="processCharging"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAuthen">
+      <http:operation location="ProcessAuthen"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProcessClients">
+    <!--<wsdl:port name="ProcessClientsSOAP11port_http" binding="axis2:ProcessClientsSOAP11Binding">
+            <soap:address location="http://localhost/process/services/ProcessClients"/>
+        </wsdl:port>-->
+    <wsdl:port name="ProcessClientsSOAP12port_http" binding="axis2:ProcessClientsSOAP12Binding">
+      <soap12:address location="http://localhost:8081/process/services/ProcessClients"/>
+    </wsdl:port>
+    <!--<wsdl:port name="ProcessClientsHttpport" binding="axis2:ProcessClientsHttpBinding">
+            <http:address location="http://localhost/process/services/ProcessClients"/>
+        </wsdl:port>-->
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8081/process/services/ProcessClients</con:endpoint></con:endpoints><con:operation id="b60d4219-3249-4f8c-b3d0-09d3bd70a8eb" isOneWay="false" action="urn:ProcessAuthen" name="ProcessAuthen" bindingOperationName="ProcessAuthen" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ebfad55d-9309-4a62-8101-c74e3ad83392" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/process/services/ProcessClients</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://vas/com/xsd">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <xsd:ProcessAuthen>\r
+         <!--Optional:-->\r
+         <xsd:username>?</xsd:username>\r
+         <!--Optional:-->\r
+         <xsd:password>?</xsd:password>\r
+         <!--Optional:-->\r
+         <xsd:cmd>?</xsd:cmd>\r
+         <!--Optional:-->\r
+         <xsd:providerid>?</xsd:providerid>\r
+      </xsd:ProcessAuthen>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ProcessAuthen"/></con:call></con:operation><con:operation id="18d0f430-71d5-4ba3-90e5-906aa05c1114" isOneWay="false" action="urn:processCharging" name="processCharging" bindingOperationName="processCharging" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e3f2a2bb-c927-4829-85a4-67968443081c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8081/process/services/ProcessClients</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://vas/com/xsd">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <xsd:processCharging>\r
+         <!--Optional:-->\r
+         <xsd:msisdn>?</xsd:msisdn>\r
+         <!--Optional:-->\r
+         <xsd:charging>?</xsd:charging>\r
+         <!--Optional:-->\r
+         <xsd:username>?</xsd:username>\r
+         <!--Optional:-->\r
+         <xsd:password>?</xsd:password>\r
+         <!--Optional:-->\r
+         <xsd:reqTime>?</xsd:reqTime>\r
+         <!--Optional:-->\r
+         <xsd:providerid>?</xsd:providerid>\r
+         <!--Optional:-->\r
+         <xsd:serviceId>?</xsd:serviceId>\r
+         <!--Optional:-->\r
+         <xsd:cmd>?</xsd:cmd>\r
+         <!--Optional:-->\r
+         <xsd:contents>?</xsd:contents>\r
+         <!--Optional:-->\r
+         <xsd:requestId>?</xsd:requestId>\r
+      </xsd:processCharging>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:processCharging"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="3acf1074-7fbd-448f-9936-93a9269bbcd8" wsaVersion="NONE" name="ProcessClientsSOAP11Binding" type="wsdl" bindingName="{http://vas/com/}ProcessClientsSOAP11Binding" soapVersion="1_1" anonymous="optional" definition="file:/D:/01.Working/Imuzik/KHDN/source/frontend/web/vcgw.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/D:/01.Working/Imuzik/KHDN/source/frontend/web/vcgw.wsdl"><con:part><con:url>file:/D:/01.Working/Imuzik/KHDN/source/frontend/web/vcgw.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://vas/com/" xmlns:axis2="http://vas/com/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://vas/com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <wsdl:documentation>ProcessClients</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://vas/com/xsd" xmlns:ns="http://vas/com/xsd">
+      <xs:element name="ProcessAuthen">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="username" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="cmd" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="providerid" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessAuthenResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="processCharging">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="msisdn" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="charging" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="username" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="reqTime" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="providerid" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="serviceId" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="cmd" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="contents" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="requestId" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="processChargingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="processChargingRequest">
+    <wsdl:part name="part1" element="ns0:processCharging"/>
+  </wsdl:message>
+  <wsdl:message name="processChargingResponse">
+    <wsdl:part name="part1" element="ns0:processChargingResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ProcessAuthenRequest">
+    <wsdl:part name="part1" element="ns0:ProcessAuthen"/>
+  </wsdl:message>
+  <wsdl:message name="ProcessAuthenResponse">
+    <wsdl:part name="part1" element="ns0:ProcessAuthenResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ProcessClientsPortType">
+    <wsdl:operation name="processCharging">
+      <wsdl:input message="axis2:processChargingRequest" wsaw:Action="urn:processCharging"/>
+      <wsdl:output message="axis2:processChargingResponse" wsaw:Action="urn:processChargingResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAuthen">
+      <wsdl:input message="axis2:ProcessAuthenRequest" wsaw:Action="urn:ProcessAuthen"/>
+      <wsdl:output message="axis2:ProcessAuthenResponse" wsaw:Action="urn:ProcessAuthenResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProcessClientsSOAP11Binding" type="axis2:ProcessClientsPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="processCharging">
+      <soap:operation soapAction="urn:processCharging" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAuthen">
+      <soap:operation soapAction="urn:ProcessAuthen" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProcessClientsSOAP12Binding" type="axis2:ProcessClientsPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="processCharging">
+      <soap12:operation soapAction="urn:processCharging" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAuthen">
+      <soap12:operation soapAction="urn:ProcessAuthen" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProcessClientsHttpBinding" type="axis2:ProcessClientsPortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="processCharging">
+      <http:operation location="processCharging"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAuthen">
+      <http:operation location="ProcessAuthen"/>
+      <wsdl:input>
+        <mime:content type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProcessClients">
+    <!--<wsdl:port name="ProcessClientsSOAP11port_http" binding="axis2:ProcessClientsSOAP11Binding">
+            <soap:address location="http://localhost/process/services/ProcessClients"/>
+        </wsdl:port>-->
+    <wsdl:port name="ProcessClientsSOAP12port_http" binding="axis2:ProcessClientsSOAP12Binding">
+      <soap12:address location="http://localhost:8081/process/services/ProcessClients"/>
+    </wsdl:port>
+    <!--<wsdl:port name="ProcessClientsHttpport" binding="axis2:ProcessClientsHttpBinding">
+            <http:address location="http://localhost/process/services/ProcessClients"/>
+        </wsdl:port>-->
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints/><con:operation id="600b50e0-c1da-400f-b9f4-dee9ef2e2d7d" isOneWay="false" action="urn:ProcessAuthen" name="ProcessAuthen" bindingOperationName="ProcessAuthen" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="821c12c3-105b-4a89-964e-fe17f751ce21" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://vas/com/xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <xsd:ProcessAuthen>\r
+         <!--Optional:-->\r
+         <xsd:username>?</xsd:username>\r
+         <!--Optional:-->\r
+         <xsd:password>?</xsd:password>\r
+         <!--Optional:-->\r
+         <xsd:cmd>?</xsd:cmd>\r
+         <!--Optional:-->\r
+         <xsd:providerid>?</xsd:providerid>\r
+      </xsd:ProcessAuthen>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ProcessAuthen"/></con:call></con:operation><con:operation id="ce29fd6e-0e45-4989-abe9-ed9c2640e626" isOneWay="false" action="urn:processCharging" name="processCharging" bindingOperationName="processCharging" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c91d6469-98a9-47af-afb9-f95c7fe71f54" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://vas/com/xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <xsd:processCharging>\r
+         <!--Optional:-->\r
+         <xsd:msisdn>?</xsd:msisdn>\r
+         <!--Optional:-->\r
+         <xsd:charging>?</xsd:charging>\r
+         <!--Optional:-->\r
+         <xsd:username>?</xsd:username>\r
+         <!--Optional:-->\r
+         <xsd:password>?</xsd:password>\r
+         <!--Optional:-->\r
+         <xsd:reqTime>?</xsd:reqTime>\r
+         <!--Optional:-->\r
+         <xsd:providerid>?</xsd:providerid>\r
+         <!--Optional:-->\r
+         <xsd:serviceId>?</xsd:serviceId>\r
+         <!--Optional:-->\r
+         <xsd:cmd>?</xsd:cmd>\r
+         <!--Optional:-->\r
+         <xsd:contents>?</xsd:contents>\r
+         <!--Optional:-->\r
+         <xsd:requestId>?</xsd:requestId>\r
+      </xsd:processCharging>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:processCharging"/></con:call></con:operation></con:interface><con:mockService id="e63d17c7-acab-4399-bf6b-6750a7560cdc" port="8081" path="/process/services/ProcessClients" host="192.168.146.87" name="Charge Mock WS" bindToHostOnly="false" docroot="" faultMockOperation="processCharging"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="processCharging" id="a7d6f955-6f40-43e8-b3dc-b34b2e860749" interface="ProcessClientsSOAP12Binding" operation="processCharging"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="fb54ad2d-2c87-4721-8809-4224af89c4c2" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://vas/com/xsd">
+   <soap:Header/>
+   <soap:Body>
+      <xsd:processChargingResponse>
+         <!--Optional:-->
+         <xsd:return>0</xsd:return>
+      </xsd:processChargingResponse>
+   </soap:Body>
+</soap:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:processChargingResponse"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

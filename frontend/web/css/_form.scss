@@ -1,0 +1,168 @@
+.login-form{
+  background: rgba(61,1,21,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(61,1,21,1) 0%, rgba(0,0,0,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(61,1,21,1)), color-stop(100%, rgba(0,0,0,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(61,1,21,1) 0%, rgba(0,0,0,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(61,1,21,1) 0%, rgba(0,0,0,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(61,1,21,1) 0%, rgba(0,0,0,1) 100%);
+background: radial-gradient(ellipse at center, rgba(61,1,21,1) 0%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d0115', endColorstr='#000000', GradientType=1 );
+
+  min-height: 100vh;
+  .text-header{
+    text-align: center;
+    img{
+      width: 80px;
+      height: 80px;
+      margin-top: 80px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+/**
+* Make the field a flex-container, reverse the order so label is on top.
+*/
+.float-label{
+  width: 300px;
+  margin: 0 auto;
+  .field {
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: flex-start;
+    position: relative;
+  }
+      /**
+      * Add a transition to the label and input.
+      * I'm not even sure that touch-action: manipulation works on
+      * inputs, but hey, it's new and cool and could remove the 
+      * pesky delay.
+      */
+      label, input {
+        transition: all 0.2s;
+        touch-action: manipulation;
+      }
+  
+      input {
+        font-size: 1em;
+        height: auto;
+        color: #fff;
+        line-height: normal;
+        border: 0;
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        font-family: inherit;
+        -webkit-appearance: none;
+        border-radius: 0;
+        padding: 0 0 7px 0;
+        cursor: text;
+        background-color: transparent;
+      }
+  
+      input:focus {
+        outline: 0;
+        box-shadow: unset;
+      }
+  
+      label {
+        letter-spacing: 0.05em;
+        color: #ff0052;
+        font-weight: normal;
+      }
+      /**
+      * Translate down and scale the label up to cover the placeholder,
+      * when following an input (with placeholder-shown support).
+      * Also make sure the label is only on one row, at max 2/3rds of the
+      * field—to make sure it scales properly and doesn't wrap.
+      */
+      input:placeholder-shown + label {
+        cursor: text;
+        max-width: 66.66%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transform-origin: left bottom;
+        transform: translate(0, 2rem) scale(0.9);
+      }
+      /**
+      * By default, the placeholder should be transparent. Also, it should 
+      * inherit the transition.
+      */
+      ::-webkit-input-placeholder {
+        opacity: 0;
+        transition: inherit;
+      }
+      /**
+      * Show the placeholder when the input is focused.
+      */
+      input:focus::-webkit-input-placeholder {
+        opacity: 1;
+      }
+      /**
+      * When the element is focused, remove the label transform.
+      * Also, do this when the placeholder is _not_ shown, i.e. when 
+      * there's something in the input at all.
+      */
+      input:not(:placeholder-shown) + label,
+      input:focus + label {
+        transform: translate(0, 0) scale(1);
+        font-size: 12px;
+        cursor: pointer;
+      }
+  
+    .inputOtp {
+      input{
+        text-align: center;
+      }
+    }
+
+    .has-error {
+      .form-control{
+        box-shadow: unset;
+      }
+    }
+
+    .txt-forgot-pass{
+      color: #fff;
+      font-family: 'Montserrat-Bold';
+    }
+  .btn-onme-accept{
+    margin-top: 30px;
+  }
+  .txt-1{
+    font-family: 'Montserrat-Bold';
+    font-size: 20px;
+  }
+  .toggle-password{
+    position: absolute;
+      right: 0;
+      top: 25px;
+      width: 20px;
+    height: 20px;
+  }
+
+}
+
+.btn-onme-accept{
+  background-color: #ff0052;
+  border-color: 0;
+  width: 100%;
+  padding: 10px;
+  @include radius-rounder(20px);
+}
+
+.btn-onme-cancel{
+  background-color: #353637;
+  border-color: 0;
+  width: 100%;
+  padding: 10px;
+  @include radius-rounder(20px);
+  color: #fff;
+}
+
+
+.btn-onme-accept.disabled{
+  background-color: #c3003f;
+  border-color: 0;
+}
+

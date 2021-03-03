@@ -1,0 +1,1 @@
+<?php echo ($errors[$field][0]) ? '<p class="error-message">' . $errors[$field][0] . '</p>' : ''; ?>
